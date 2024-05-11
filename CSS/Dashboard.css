@@ -1,0 +1,443 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline-offset: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* ---  Scrollbar --- */
+html {
+    --scrollbarBG: #cfd8dc;
+    --thumbBG: #0937c1;
+}
+
+body::-webkit-scrollbar {
+    width: 11px;
+}
+
+body {
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG);
+    border-radius: 6px;
+    border: 3px solid var(--scrollbarBG);
+}
+
+/* ---  Scrollbar --- */
+
+body {
+    display: flex;
+}
+
+.sidebar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 110px;
+    height: 100vh;
+    padding: 0 1.7rem;
+    color: #fff;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    background: #121617;
+}
+
+.sidebar:hover {
+    width: 240px;
+    transition: 0.5s;
+}
+
+.logo {
+    height: 80px;
+    padding: 16px;
+}
+
+.menu {
+    height: 88%;
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    padding: 1rem;
+    margin: 8px 0;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu li:hover,
+.active {
+    background-color: #ffffff58;
+}
+
+.menu a {
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    color: #adadad;
+}
+
+.menu a span {
+    overflow: hidden;
+}
+
+.menu a i {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.logout {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* ----- MAIN CONTENT SECTION ------------ */
+.main--content {
+    position: relative;
+    background: #f8e5e5;
+    width: 100%;
+    padding: 1rem;
+}
+
+.header--wrapper img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+    margin-left: 15px;
+}
+
+.header--wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px 2rem;
+    margin-bottom: 1rem;
+}
+
+.header--title {
+    color: rgba(113, 99, 186, 255);
+}
+
+.user--info {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.search--box {
+    background: rgb(237, 237, 246);
+    border-radius: 15px;
+    color: rgba(113, 99, 186, 255);
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 4px 12px;
+    border: none;
+    outline: none;
+}
+
+.search--box input {
+    background: transparent;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.search--box i {
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+
+.search--box i:hover {
+    transform: scale(1.2);
+}
+
+/* ----------  CARD CONTAINER ---------------*/
+.card--container {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.card--wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.main--title {
+    color: rgba(113, 99, 186, 255);
+    padding-bottom: 10px;
+    font-size: 15px;
+}
+
+.payment--card {
+    background: rgb(299, 224, 220);
+    border-radius: 10px;
+    padding: 1.2rem;
+    width: 290px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+}
+
+.payment--card:hover {
+    transform: translateY(-5px);
+}
+
+.card--header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.amount {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 12px;
+    font-weight: 200;
+}
+
+.amount--value {
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+}
+
+/* Styling for the outer span with class 'profile' */
+.profile {
+    display: inline-block; /* This makes the span a block-level element with inline properties */
+    padding: 25px; /* Adjust the padding as needed */
+    border-radius: 50%; /* This creates a circular shape for the span */
+}
+
+/* Styling for the inner i element */
+.profile i {
+    font-size: 50px; /* Set a larger font size for the user circle icon */
+    color: #676469; /* Set the color to a light violet shade */
+}
+
+
+.icon {
+    color: #b9b7b7;
+    padding: 1rem;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    background: red;
+}
+
+.card-detail {
+    font-size: 18px;
+    color: #dcd8d8;
+    letter-spacing: 2px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* ----- COLOR CSS ------ */
+.light-red {
+    background: rgb(235, 234, 234);
+}
+
+.light-purple {
+    background: rgb(254, 226, 254);
+}
+
+.light-green {
+    background: rgb(235, 254, 235);
+}
+
+.light-blue {
+    background: rgb(236, 236, 254);
+}
+
+.light-orange {
+    background: rgb(248, 175, 28);
+}
+
+.dark-red {
+    background: red;
+}
+
+.dark-purple {
+    background: rgb(81, 69, 81);
+}
+
+.dark-green {
+    background: rgb(64, 174, 64);
+}
+
+.dark-blue {
+    background: rgb(12, 12, 125);
+}
+
+.dark-orange {
+    background: rgb(91, 59, 1);
+}
+
+/* Reset default margin and padding */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Tabular Wrapper Styles */
+.tabular--wrapper {
+    margin-top: 20px;
+}
+
+/* Main Title Styles */
+.main--title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Table Styles */
+.table-container {
+    overflow-x: auto;
+}
+tbody {
+    background: #fff9f9; /* Update to white background */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #0d57d6;
+    color: white;
+}
+
+/* Hover effect for table rows */
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Clickable Row Styles */
+.clickable-row {
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.clickable-row:hover {
+    background-color: #f0f0f0;
+}
+
+/* Button Styles */
+.action-btn {
+    padding: 8px 12px;
+    margin-right: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+/* Edit Button Styles */
+.edit-btn {
+    background-color: #3498db;
+    color: white;
+}
+
+/* Delete Button Styles */
+.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+}
+
+/* Approved Button Styles */
+.approved-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Hover effect for buttons */
+.action-btn:hover {
+    background-color: #555;
+}
+
+/* Divider Styles */
+.divider {
+    width: 1px;
+    background-color: #ddd;
+}
+
+/* Add divider to table headers */
+th:not(:last-child) {
+    border-right: none;
+}
+
+/* Add divider to table cells */
+td:not(:last-child) {
+    border-right: none;
+}
+
+/* Add divider to table rows */
+tr:not(:last-child) td {
+    border-bottom: 1px solid #ddd;
+}
+
+/* Icon in the header section */
+.header--wrapper .icon {
+    font-size: 50px; /* Adjust the size as needed */
+    border-radius: 50%;
+    margin-left: 15px;
+    color: rgba(113, 99, 186, 255);
+}
+
+.header--wrapper .icon:hover {
+    transform: scale(1.1);
+}
+.logout-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000000;
+  }
+  
+  .logout-link i {
+    margin-right: 5px;
+  }
+  
+  .logout-link:hover {
+    color: #ff0000;
+  }

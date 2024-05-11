@@ -1,0 +1,202 @@
+<?php
+session_start();
+
+// Check if the user is logged in
+if (!isset($_SESSION["user"])) {
+    header("Location: AdminLogin.php");
+    exit();
+}
+
+// Logout logic
+if (isset($_POST["logout"])) {
+    // Destroy the session
+    session_destroy();
+
+    // Redirect to the login page after logout
+    header("Location: AdminLogin.php");
+    exit();
+}
+
+// ... (rest of your code)
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Bootstrap CSS -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./CSS/Dashboard.css">
+
+    <!--FONTAWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo"></div>
+        <ul class="menu">
+            <li class="active">
+                <a href="#">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+
+
+            <li>
+                <a href="Approval.php">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Approval</span>
+                </a>
+            </li>
+            <li>
+                <a href="History.php">
+                    <i class="fas fa-history"></i> <!-- Added history icon -->
+                    <span>Transactions</span>
+                </a>
+            </li>
+
+            <li>
+
+                <a href="#">
+                    <i class="fas fa-question-circle"></i>
+                    <span>Reviews</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fas fa-calendar"></i>
+                    <span>Calendar</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+    <div class="main--content">
+        <div class="header--wrapper">
+            <div class="header--title">
+                <h1><span>Shop-1</span></h1>
+                <h2>Dashboard</h2>
+            </div>
+
+            <div class="user--info">
+                <div class="search--box">
+                    <i class="fa-solid fa-search"></i>
+                    <input type="text" placeholder="Search" />
+                  
+
+                </div>
+                <i class="fa-regular fa-bell fa-2xl"></i>
+                <span class="profile"><i class="fas fa-user-circle"></i></span>
+
+            </div>
+
+        </div>
+        <div class="card--container">
+            <h3 class="main--title">Recent Bookings</h3>
+            <div class="card--wrapper">
+                <div class="payment--card yellow">
+                    <div class="card--header">
+                        <div class="amount">
+                            <span class="title">Newly Appointments</span>
+                            <span class="amount--value">20</span>
+                        </div>
+                        <i class="fas fa-users icon dark-purpule"></i>
+                    </div>
+                    <!--  <span class="card-detail"> **** **** **** 3484</span> -->
+                </div>
+
+                <div class="payment--card light-yellow">
+                    <div class="card--header">
+                        <div class="amount">
+                            <span class="title">Past Appointments</span>
+                            <span class="amount--value">220</span>
+                        </div>
+                        <i class="fas fa-users icon dark-green"></i>
+                    </div>
+                    <!--  <span class="card-detail"> **** **** **** 3484</span> -->
+                </div>
+
+                <div class="payment--card light-red">
+                    <div class="card--header">
+                        <div class="amount">
+                            <span class="title">Reserved Appointments</span>
+                            <span class="amount--value">500</span>
+                        </div>
+                        <i class="fas fa-users icon dark-green"></i>
+                    </div>
+                    <!--   <span class="card-detail"> **** **** **** 3484</span> -->
+                </div>
+
+                <div class="payment--card light-green">
+                    <div class="card--header">
+                        <div class="amount">
+                            <span class="title">Approved Appointments</span>
+                            <span class="amount--value">600</span>
+                        </div>
+                        <i class="fas fa-check icon blue"></i>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="tabular--wrapper">
+            <h3 class="main--title">Repair Bookings</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Address</th>
+                            <th>Phone</th>
+                            <th>Email</th>
+                            <th>Date and Time</th>
+                            <th>Vehicle</th>
+                            <th>Issue</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                    
+    
+            </tr>
+           </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Additional HTML content or scripts can be added here -->
+
+<script>
+    // Your JavaScript code here
+</script>
+
+</body>
+</html>
+   </div
